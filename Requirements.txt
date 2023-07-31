@@ -1,0 +1,11 @@
+The requirements will not be done through user and system requirements as this is a small scale simple app.
+I'm creating this small app just to get to used to the whole project environment, so the requirements will not be in too much detail
+Requirements:
+-Users should be able to add tasks to a to do lists
+-Users should be able to remove tasks from the to do list
+-Users should be able to update the tasks within their to do list
+-Users should be able to move the order of tasks within the to do lists
+-Users should be able to create different to do lists and access each of them individually
+-Users should be able to set due dates for their to do lists
+-Users should be able to set a task prioritsation for their to do list
+-Users should be able to categorise their to do list

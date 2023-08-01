@@ -38,4 +38,11 @@ public class Task {
     public String getDescription(){
         return description;
     }
+    /**
+     * Return the Due date of the task
+     * @return
+     */
+    public LocalDate getDueDate(){
+        return dueDate;
+    }
 }

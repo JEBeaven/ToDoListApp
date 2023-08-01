@@ -38,7 +38,7 @@ public class ToDoList {
         }
         else{
             for(Task task: tasks){
-                System.out.println(task.getName() + "-" + task.getDescription());
+                System.out.println(task.getName() + " --- " + task.getDescription() + " --- " + task.getDueDate());
             }
         }
     }

@@ -9,7 +9,7 @@ public class Task {
     private String name;
     private String description;
     private LocalDate dueDate;
-    private boolean isCompleted;
+    public boolean isCompleted;
     private Integer priority;
 
     /**
@@ -63,5 +63,11 @@ public class Task {
      */
     public Integer getPriority(){
         return priority;
+    }
+    /**
+     * Sets the isCompleted variable to true indicating that the task has been completed
+     */
+    public void setCompleted(){
+        isCompleted = true;
     }
 }

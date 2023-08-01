@@ -11,7 +11,8 @@ public class Task {
     private LocalDate dueDate;
     private boolean isCompleted;
 
-    /*
+    /**
+     * /*
      * The task Constructor that contrusts a task object with the given name, descrpition an its due date
      * @param name        The name of the given task
      * @param description The descirption of the given task
@@ -22,5 +23,19 @@ public class Task {
         this.description = description;
         this.dueDate = dueDate;
         this.isCompleted = false; //Tasks are automatically not completed.
+    }
+    /**
+     * Return for the tasks name
+     * @return name
+     */
+    public String getName(){
+        return name;
+    }
+    /**
+     * Return the description of the task
+     * @return description
+     */
+    public String getDescription(){
+        return description;
     }
 }

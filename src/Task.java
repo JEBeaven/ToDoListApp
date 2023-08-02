@@ -18,7 +18,7 @@ public class Task {
      * @param name        The name of the given task
      * @param description The descirption of the given task
      * @param dueDate     The due date of the given task
-     * @param priority    The tasks priority - 1:the lowest, 2: middle, 3: highest priority-must be completed before the 1 and 2.
+     * @param priority    The tasks priority - 1:the highest, 2: middle, 3: lowest priority-must be after the 1 and 2's.
      */
     public Task(String name, String description, LocalDate dueDate, Integer priority){
         this.name = name;
@@ -29,11 +29,13 @@ public class Task {
             this.priority = 1;
             System.out.println("Priority entered was less than 1, assumed you have meant 1");
         }
-        if(priority > 3){
+        else if(priority > 3){
             this.priority = 3;
             System.out.println("Priority entered was greater than 3, assumed you have meant 3");
         }
-        this.priority = priority;
+        else{
+            this.priority = priority;
+        }
 
     }
     /**

@@ -1,19 +1,20 @@
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PriorityQueue;
 
 /**
  * The ToDoList class is used to represent the groupings of tasks
  * 
  */
 public class ToDoList {
-    private List<Task> tasks;
+    private PriorityQueue<Task> tasks;
     /**
-     * Construcs a new instace of the ToDoList class.
-     * Initialises the task list with an empty array list
+     * Constructs a new instace of the ToDoList class.
+     * Initialises the task priority queue with an empty queue that compares using the tasks priority.
      */
     public ToDoList(){
-        tasks = new ArrayList<>();
+        tasks = new PriorityQueue<>((task1, task2) -> task1.getPriority() - task2.getPriority());
     }
     /**
      * Adds task to the current ToDoList
@@ -29,16 +30,18 @@ public class ToDoList {
     public void removeTask(Task task){
         tasks.remove(task);
     }
-    
+
     /**
      * Removes all completed tasks from the todo list
      */
     public void removeCompletedTasks(){
-        for(Task task: tasks){
-            if(task.isCompleted){
-                tasks.remove(task);
+        List<Task> tasksToRemove = new ArrayList<>();
+        for (Task task : tasks){
+            if (task.isCompleted){
+                tasksToRemove.add(task);
             }
         }
+        tasks.removeAll(tasksToRemove);
     }
     /**
      * Displays to the user their current ToDoList
@@ -49,7 +52,7 @@ public class ToDoList {
         }
         else{
             for(Task task: tasks){
-                System.out.println(task.getName() + " --- " + task.getDescription() + " --- " + task.getDueDate());
+                System.out.println(task.getName() + " --- " + task.getDescription() + " --- " + task.getDueDate() + " --- " + task.getPriority());
             }
         }
     }

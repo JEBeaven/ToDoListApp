@@ -56,4 +56,11 @@ public class ToDoList {
             }
         }
     }
+    /**
+     * A getter for all the tasks in the current ToDoList
+     * @return the list of tasks
+     */
+    public List<Task> getTasks(){
+        return new ArrayList<>(tasks);
+    }
 }

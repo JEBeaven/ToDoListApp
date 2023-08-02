@@ -68,6 +68,20 @@ public class Task {
      * Sets the isCompleted variable to true indicating that the task has been completed
      */
     public void setCompleted(){
-        isCompleted = true;
+        this.isCompleted = true;
+    }
+    /**
+     * Setter for the description
+     * @param description
+     */
+    public void setDescription(String description){
+        this.description = description;
+    }
+    /**
+     * Setter for the date
+     * @param date
+     */
+    public void setDate(LocalDate date){
+        this.dueDate = date;
     }
 }

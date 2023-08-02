@@ -1,3 +1,4 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,7 +29,17 @@ public class ToDoList {
     public void removeTask(Task task){
         tasks.remove(task);
     }
-
+    
+    /**
+     * Removes all completed tasks from the todo list
+     */
+    public void removeCompletedTasks(){
+        for(Task task: tasks){
+            if(task.isCompleted){
+                tasks.remove(task);
+            }
+        }
+    }
     /**
      * Displays to the user their current ToDoList
      */

@@ -1,5 +1,7 @@
 import java.time.LocalDate;
-
+/**
+ * No utility here in the app class, this is just the class used to test the software works correctly
+ */
 public class App {
     public static void main(String[] args) throws Exception {
         ToDoList todoList = new ToDoList();
@@ -12,6 +14,7 @@ public class App {
         todoList.addTask(task3);
         todoList.addTask(task4);
         todoList.showToDoList();
-
+        TaskFileManager.saveTasksToFile("tasks.json",todoList);
+        TaskFileManager.loadTasksFromFile("tasks.json", todoList);
     }
 }

@@ -67,10 +67,18 @@ public class Task {
         return priority;
     }
     /**
-     * Sets the isCompleted variable to true indicating that the task has been completed
+     * Getter for is completed
+     * @return what isCompleted is
      */
-    public void setCompleted(){
-        this.isCompleted = true;
+    public boolean getCompleted(){
+        return isCompleted;
+    }
+    /**
+     * Sets the isCompleted variable to true indicating that the task has been completed
+     * @param completed
+     */
+    public void setCompleted(boolean completed){
+        isCompleted = completed;
     }
     /**
      * Setter for the description
@@ -85,5 +93,12 @@ public class Task {
      */
     public void setDate(LocalDate date){
         this.dueDate = date;
+    }
+    /**
+     * Overriding the toString method so taht it can be displayed in the UI
+     */
+    @Override
+    public String toString() {
+        return getName() + " --- " + getDescription() + " --- " + getDueDate() + " --- " + getPriority();
     }
 }

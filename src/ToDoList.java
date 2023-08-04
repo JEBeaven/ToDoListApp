@@ -63,4 +63,12 @@ public class ToDoList {
     public List<Task> getTasks(){
         return new ArrayList<>(tasks);
     }
+
+    /**
+     * Sets the desired task to completed
+     * @param task
+     */
+    public void taskCompleted(Task task){
+        task.setCompleted(true);
+    }
 }

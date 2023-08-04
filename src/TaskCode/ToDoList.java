@@ -37,7 +37,7 @@ public class ToDoList {
     public void removeCompletedTasks(){
         List<Task> tasksToRemove = new ArrayList<>();
         for (Task task : tasks){
-            if (task.isCompleted){
+            if(task.getCompleted()){
                 tasksToRemove.add(task);
             }
         }

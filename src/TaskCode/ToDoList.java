@@ -71,4 +71,12 @@ public class ToDoList {
     public void taskCompleted(Task task){
         task.setCompleted(true);
     }
+    
+    /**
+     * A method to get the size of the todolist
+     * @return an int of the size of the todolist
+     */
+    public int size(){
+        return tasks.size();
+    }
 }
